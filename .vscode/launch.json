@@ -1,0 +1,31 @@
+{
+    // Użyj funkcji IntelliSense, aby uzyskać informacje o możliwych atrybutach.
+    // Najedź kursorem, aby wyświetlić opisy istniejących atrybutów.
+    // Aby uzyskać więcej informacji, odwiedź stronę: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "android",
+            "request": "attach",
+            "name": "Android Attach",
+            "appSrcRoot": "${workspaceRoot}/app/src/main",
+            "adbPort": 5037,
+            "processId": "${command:PickAndroidProcess}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Uruchom program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}"
+        },
+        {
+            "name": "Zainstaluj APK na urządzeniu",
+            "type": "android",
+            "request": "launch",
+            "apkFile": "${workspaceFolder}/ścieżka/do/twojego.apk"
+        }
+    ]
+}
